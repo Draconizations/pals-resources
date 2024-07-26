@@ -1,0 +1,12 @@
+---
+interface Props {
+  text: string,
+  id: string
+}
+
+let { id, text } = Astro.props
+---
+
+<li class="tab-link-item">
+  <a class="tab-link" href={`#${id}`}>{text}</a>
+</li>

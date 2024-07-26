@@ -1,16 +1,54 @@
 ---
-
+import BaseLayout from "../layouts/base.astro"
+import Header from "../components/header.astro"
+import Block from "../components/block.astro"
+import Tabs from "../components/tabs.astro"
+import Tab from "../components/tab.astro"
+import TabNav from "../components/tabNav.astro"
+import TabLink from "../components/tabLink.astro"
+import Callout from "../components/callout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout style="default">
+	<Header tag="this site sucks"/>
+	<main class="flex-col">
+		<section>
+			<nav class="shadow block flex-row flex-wrap align-center">
+					<h2 class="text-medium">Jump to</h2>
+					<a class="btn" href="/archive">ALL tutorials</a>
+					<a class="btn" href="/webdev">Webdev</a>
+					<a class="btn" href="/plural">Plurality</a>
+			</nav>
+		</section>
+		<section>
+			<Block>
+				<h2>Welcome to tutorial hell!</h2>
+				<hr/>
+				<p>This site serves as a resource for various things that I know some stuff about and wanted to teach to other people. <i>This includes but is not limited to:</i></p>
+				<ul>
+					<li>Web development, starting from the very basics</li>
+					<li>Some plurality related resources</li>
+					<li>Life advice we've picked up and learnt over the years</li>
+				</ul>
+				<Callout color="warning" title="Disclaimer" details>
+					<p>I'm just some guy in my early 20s. I don't claim to have infinite wisdom. These are just things that I found useful and want to share with others, nothing more than that.</p>
+				</Callout>
+			</Block>
+		</section>
+		<section>
+			<TabNav>
+				<TabLink id="who" text="Who made this" />
+				<TabLink id="what" text="Other work" />
+			</TabNav>
+			<Tabs block class="flex-fill">
+				<Tab id="what">
+					<h2>What else did you make?</h2>
+					<p>Oh boy, a lot of stuff. I'll add onto this later.</p>
+				</Tab>
+				<Tab id="who" default>
+					<h2>Who made this site?</h2>
+					<p><b>I'm Jake!</b> Also known as PALS. I use "I" and "we" interchangeably (<a href="https://morethanone.info">why?</a>). I like creating things! I want other people to enjoy creating things too. That's why I made this site. Because a lot of my friends struggle with more formal learning resources, just like me.</p>
+				</Tab>
+			</Tabs>	
+	</main>
+</BaseLayout>

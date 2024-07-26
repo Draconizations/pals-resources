@@ -1,0 +1,8 @@
+---
+const { title, tag } = Astro.props;
+---
+
+<div class="row">
+  <h1 class="tag text-large text-uppercase col-12 col-md-8 text-center">{title ?? "resources.pals.gay"}</h1>
+  <span class="tag text-large col-12 col-md-4 text-center">{tag ?? "hello!"}</span>
+</div>

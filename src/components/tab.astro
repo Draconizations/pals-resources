@@ -1,0 +1,15 @@
+---
+interface Props {
+  class?: string,
+  default?: boolean,
+  id: string,
+}
+const { class: className, default: isDefault, id } = Astro.props;
+---
+
+<div 
+  class={`tab ${className} ${isDefault ? "default" : ""}`}
+  id={id}
+>
+  <slot />
+</div>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string,
+  block?: boolean,
+}
+const { class: className, block = false } = Astro.props;
+---
+
+<div 
+  class={`tab-container ${block ? "block shadow" : ""} ${className}`}
+>
+  <slot />
+</div>

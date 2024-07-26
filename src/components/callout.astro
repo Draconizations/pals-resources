@@ -1,0 +1,43 @@
+---
+interface Props {
+  color?: "accent"|"success"|"warning"|"error"|"info"
+  style?: "transparent"|"outline"|"full"|"outline-fill"
+  details?: boolean,
+  title?: string,
+  emoji?: string
+}
+
+let { color = "accent", style = "transparent", details = false, title, emoji} = Astro.props;
+const classes = () => {
+  if (style === "transparent") return `${color}-bg-faded`
+  else if (style === "full") return `${color}-bg`
+  else if (style === "outline") return `${color}-border`
+  else if (style === "outline-fill") return `${color}-border-fill`
+}
+---
+
+{!details ? 
+  <div class={classes() + " p-1"} style="display: flex; flex-direction: column; gap: 0.5rem;">
+    {title ? 
+      <b class="text-medium">{emoji} {title}</b>
+      <hr class="warning-bg"/> 
+      : 
+      ""
+    }
+    <slot />
+  </div>
+  :
+  <details class={classes() + " p-1"}>
+    {title ? 
+      <summary class="text-medium">
+        <b>{emoji} {title}</b>
+      </summary>
+      : 
+      <summary class="text-medium">
+        <b>{emoji} Details</b>
+      </summary>
+    }
+    <hr class="warning-bg my-05"/> 
+    <slot />
+  </details>
+}

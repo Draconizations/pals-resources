@@ -1,0 +1,29 @@
+:root {
+  --font-family: 'Atkinson Hyperlegible', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --bg-base: #17b2b8;
+  --bg-image: url(/img/cloudy_pals.png);
+  --bg-gradient: linear-gradient(0deg, rgb(102, 235, 142) 0%, rgb(58, 180, 236) 50%, rgba(57, 126, 255) 100%);
+  --block-bg-color: rgba(245, 248, 250);
+  --block-shadow-color: rgba(53, 71, 121, 0.5);
+  --tab-overflow: scroll;
+  --tab-nav-bg-color: rgba(245, 248, 250, 0.8);
+  --tab-nav-bg-color--hover: rgba(245, 248, 250);
+  --tab-height: 100%;
+  --url-text-color: #007286;
+  --url-text-color--hover: #078d77;
+  --tab-nav-url-color: #024072;
+  --tab-nav-url-color--hover: #078d77;
+  --color-accent: #9aafb1;
+  --btn-bg-color: #007286;
+  --btn-bg-color--hover: #078d77;
+  --btn-text-color: #ffffff;
+  --btn-text-color--hover: #ffffff;
+}
+
+body {
+  image-rendering: pixelated;
+}
+
+.container {
+  max-width: 820px;
+}
