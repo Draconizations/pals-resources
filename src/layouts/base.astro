@@ -1,4 +1,9 @@
 ---
+interface Props {
+	title?: string,
+	style?: string,
+	frontmatter?: Props
+}
 const { title, style } = Astro.props.frontmatter || Astro.props;
 ---
 
@@ -9,7 +14,7 @@ const { title, style } = Astro.props.frontmatter || Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" type="text/css" href="/fulgurite.min.css" />
-    <link rel="stylesheet" type="text/css" href={`/css/${style}.css`} />
+    <link rel="stylesheet" type="text/css" href={`/css/${style || "default"}.css`} />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
