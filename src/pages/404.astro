@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/base.astro"
+import Header from "../components/header.astro"
+import Block from "../components/block.astro"
+---
+
+<BaseLayout>
+  <Header tag="404" title="This page doesn't exist" />
+  <main>
+    <Block>
+      <p>
+        Sorry! We're working on it. You can <a href="/">go back to the homepage here</a>.
+      </p>
+    </Block>
+  </main>
+</BaseLayout>
