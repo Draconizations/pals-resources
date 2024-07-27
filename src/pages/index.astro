@@ -39,11 +39,16 @@ import Callout from "../components/callout.astro"
 			<TabNav>
 				<TabLink id="who" text="Who made this" />
 				<TabLink id="what" text="Other work" />
+				<TabLink id="sauce" text="Source code" />
 			</TabNav>
 			<Tabs block class="flex-fill">
 				<Tab id="what">
 					<h2>What else did you make?</h2>
 					<p>Oh boy, a lot of stuff. I'll add onto this later.</p>
+				</Tab>
+				<Tab id="sauce">
+					<h2>Is the source code of this site public?</h2>
+					<p>The <a href="https://github.com/Draconizations/pals-resources">source code of the site is available here</a>! This website is built using <a href="https://astro.build">Astro</a> and hosted on github pages.</p>
 				</Tab>
 				<Tab id="who" default>
 					<h2>Who made this site?</h2>
