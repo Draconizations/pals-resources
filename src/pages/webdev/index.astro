@@ -1,0 +1,36 @@
+---
+  import BaseLayout from "../../layouts/base.astro"
+  import Header from "../../components/header.astro"
+  import Block from "../../components/block.astro"
+---
+
+<BaseLayout style="default">
+	<Header tag="yay, code!"/>
+  <section>
+    <nav class="shadow block flex-row flex-wrap align-center">
+        <h2 class="text-medium">Jump to</h2>
+        <a class="btn" href="/webdev/foreword">Foreword</a>
+        <a class="btn" href="/webdev/concepts">Concepts</a>
+        <a class="btn" href="/webdev/setup">Dev Setup</a>
+        <a class="btn" href="/webdev/frontend">Frontend</a>
+        <a class="btn" href="/webdev/backend">Backend</a>
+    </nav>
+  </section>
+  <section>
+    <Block>
+      <h2>Welcome!</h2>
+      <p>Welcome to the webdev section! This is where I give it my all and try to explain a very complicated subject to people who know... nearly nothing about this subject, but are willing to learn. Webdev is great to learn since you can make so many things if you get a grasp of it. And even then, the ability to make a silly personal webpage is really rewarding. The sky's the limit.</p>
+      <hr/>
+      <h2>Recommended reading order</h2>
+      <p>I recommend you read the tutorials and other sections in the following order</p>
+      <ol style="margin: 0;">
+        <li><a href="/webdev/foreword">Foreword</a>: an important introduction</li>
+        <li><a href="/webdev/concepts">Concepts</a>: some (simplified) stuff on how the web works</li>
+        <li><a href="/webdev/setup">Setup</a>: how to set up an enviroment where you can learn this stuff</li>
+        <li><a href="/webdev/frontend/basics">Frontend: Basics</a>: the very beginnings of html and css</li>
+        <li><a href="/webdev/frontend/intermediate">Frontend: Intermediate</a>: delving into js</li>
+        <li><a href="/webdev/backend/basics">Backend: Basics</a>: intro to server stuff</li>
+      </ol>
+    </Block>
+  </section>
+</BaseLayout>
